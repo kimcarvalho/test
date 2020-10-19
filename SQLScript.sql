@@ -11,9 +11,6 @@ create table database_name.client(
     status char(1) not null check(status = 0 or status = 1)
 );
 
-select * from database_name.client;
-delete from db_client.client where id > 0;
-
 -- creating table tel_cliente for add all telephones of client
 create table database_name.tel_client(
 	id int not null primary key auto_increment,
