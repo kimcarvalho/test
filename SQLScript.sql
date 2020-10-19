@@ -5,17 +5,17 @@ create database database_name;
 use database_name;
 
 -- creating table cliente into dabase clientes
-create table db_client.client(
+create table database_name.client(
 	id int auto_increment primary key,
     name varchar(60) not null,
     status char(1) not null check(status = 0 or status = 1)
 );
 
-select * from db_client.client;
+select * from database_name.client;
 delete from db_client.client where id > 0;
 
 -- creating table tel_cliente for add all telephones of client
-create table db_client.tel_client(
+create table database_name.tel_client(
 	id int not null primary key auto_increment,
     client_code int not null,
     tel varchar(11) not null,
@@ -24,11 +24,8 @@ create table db_client.tel_client(
     references db_client.client(id)
 );
 
-select * from db_client.tel_client;
-delete from db_client.tel_client where id > 0;
-
 -- creating table amail_cliente for add all e-mails of a client
-create table db_client.email_client(
+create table database_name.email_client(
 	id int not null primary key auto_increment,
     client_code int not null,
     email varchar(50) not null,
@@ -41,14 +38,14 @@ create table db_client.email_client(
 
 -- select emails 
 select ec.email from 
-db_client.client c, 
-db_client.email_client ec
+database_name.client c, 
+database_name.email_client ec
 where c.id = 29 
 and c.id = ec.client_code;
 
 -- select tels 
 select tc.tel from 
-db_client.client c, 
-db_client.tel_client tc
+database_name.client c, 
+database_name.tel_client tc
 where c.id = 29 
 and c.id = tc.client_code; 
