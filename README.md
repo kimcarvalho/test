@@ -63,3 +63,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Execute the SQLScript.sql for create a new database and update the .env and the class in the repository /config/database.php with your connection of database
 Start the project with the comand: php artisan serve;
 Start the project and use the ip of local pc for access your project of the mobile with the comand: php artisan serve --host=0.0.0.0;
+Access de url: localhost:port/clientes
